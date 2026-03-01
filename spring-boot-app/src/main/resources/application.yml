@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+spring:
+  cassandra:
+    contact-points: localhost
+    port: 9042
+    keyspace-name: cassandra_labs
+    local-datacenter: datacenter1
+    schema-action: CREATE_IF_NOT_EXISTS
+    request:
+      timeout: 5s

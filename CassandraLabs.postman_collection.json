@@ -1,0 +1,102 @@
+{
+  "info": {
+    "name": "CassandraLabs API",
+    "_postman_id": "cassandra-labs-collection",
+    "description": "Postman collection for CassandraLabs Spring Boot APIs (users, orders, learning plan). Replace {{baseUrl}} if your app runs on a different host/port.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080",
+      "type": "string",
+      "description": "Base URL for the running Spring Boot app"
+    }
+  ],
+  "item": [
+    {
+      "name": "Create User",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"sam@example.com\",\n  \"fullName\": \"Sam Lee\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/users",
+          "host": ["{{baseUrl}}"],
+          "path": ["api","users"]
+        }
+      }
+    },
+    {
+      "name": "Get User by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/users/22222222-2222-2222-2222-222222222222",
+          "host": ["{{baseUrl}}"],
+          "path": ["api","users","22222222-2222-2222-2222-222222222222"]
+        }
+      }
+    },
+    {
+      "name": "Get Users by Email",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/users/by-email?email=sam@example.com",
+          "host": ["{{baseUrl}}"],
+          "path": ["api","users","by-email"],
+          "query": [ { "key": "email", "value": "sam@example.com" } ]
+        }
+      }
+    },
+    {
+      "name": "Create Order",
+      "request": {
+        "method": "POST",
+        "header": [ { "key": "Content-Type", "value": "application/json" } ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": \"22222222-2222-2222-2222-222222222222\",\n  \"amount\": 89.99,\n  \"status\": \"PLACED\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/orders",
+          "host": ["{{baseUrl}}"],
+          "path": ["api","orders"]
+        }
+      }
+    },
+    {
+      "name": "Get Orders by User ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/orders/22222222-2222-2222-2222-222222222222",
+          "host": ["{{baseUrl}}"],
+          "path": ["api","orders","22222222-2222-2222-2222-222222222222"]
+        }
+      }
+    },
+    {
+      "name": "Get Learning Plan",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/learning-plan",
+          "host": ["{{baseUrl}}"],
+          "path": ["api","learning-plan"]
+        }
+      }
+    }
+  ]
+}
+

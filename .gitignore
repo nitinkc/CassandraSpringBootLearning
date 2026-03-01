@@ -1,0 +1,17 @@
+# Maven/Java build output
+spring-boot-app/target/
+**/target/
+
+# IDE settings
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+
+# Logs
+*.log
+
+# Maven wrapper downloads
+spring-boot-app/.mvn/wrapper/maven-wrapper.jar
+
