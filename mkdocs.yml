@@ -1,0 +1,24 @@
+site_name: Cassandra Learning Labs
+site_description: Cassandra CQL labs and Spring Boot learning path
+theme:
+  name: material
+  features:
+    - content.code.copy
+    - content.code.annotate
+nav:
+  - Home: index.md
+  - Labs Guide: labs-guide.md
+  - Interview Questions: interview-questions.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: true
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.details
+plugins:
+  - search
+  - mermaid2

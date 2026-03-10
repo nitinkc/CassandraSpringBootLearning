@@ -222,4 +222,3 @@ Files you may want to inspect or run
 - `docker/docker-compose.yml` — updated compose for a 2-node demo.
 - `docker/init.cql` — consolidated init script (contains `orders_by_user` table and demo data). You can run it with the init container or copy individual lab files into the running container.
 - `labs/08_relational_to_query_first.cql` — new file with step-by-step conversion and sample queries (safe to re-run).
-
